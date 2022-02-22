@@ -5,6 +5,7 @@ import Lists from './components/Lists';
 import Person from './components/Person';
 import PersonLists from './components/PersonLists';
 import Status from './components/Status'
+import Todos from './components/Todos';
 
 const person = {
   first: "Fatema",
@@ -28,9 +29,9 @@ const personLists = [
   }
 ];
 
+
+
 function App() {
-
-
   return (
     <div className="App">
       <p>I am using react with typescript for the first time.</p>
@@ -39,6 +40,7 @@ function App() {
       <PersonLists names={personLists} />
       <Status status="success" />
       <Lists />
+      <Todos />
     </div>
   );
 }
