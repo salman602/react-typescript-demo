@@ -1,32 +1,35 @@
 import React from 'react';
 import './App.css';
 import Greet from './components/Greet';
+import Lists from './components/Lists';
 import Person from './components/Person';
 import PersonLists from './components/PersonLists';
 import Status from './components/Status'
 
-function App() {
-  const person = {
+const person = {
+  first: "Fatema",
+  last: "Binte Ashiq"
+};
+const personLists = [
+  {
     first: "Fatema",
-    last: "Binte Ashiq"
-  };
-  const personLists = [
-    {
-      first: "Fatema",
-      middle: "Binte",
-      last: "ashiq"
-    },
-    {
-      first: "Abdullah",
-      middle: "Bin",
-      last: "Salman"
-    },
-    {
-      first: "Abdur Rahman",
-      middle: "Bin",
-      last: "Salman"
-    }
-  ];
+    middle: "Binte",
+    last: "ashiq"
+  },
+  {
+    first: "Abdullah",
+    middle: "Bin",
+    last: "Salman"
+  },
+  {
+    first: "Abdur Rahman",
+    middle: "Bin",
+    last: "Salman"
+  }
+];
+
+function App() {
+
 
   return (
     <div className="App">
@@ -35,6 +38,7 @@ function App() {
       <Person name={person} />
       <PersonLists names={personLists} />
       <Status status="success" />
+      <Lists />
     </div>
   );
 }
